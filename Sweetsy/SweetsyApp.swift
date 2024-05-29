@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SweetsyApp: App {
+    @StateObject var viewModel = HomeViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView().environmentObject(viewModel)
         }
     }
 }
