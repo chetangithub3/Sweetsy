@@ -15,6 +15,7 @@ class HomeViewModel: ObservableObject {
     init(apiService: APIService) {
         self.apiService = apiService
     }
+    
     func fetchMeals() async {
         guard let url = URL(string: Constants.API.dessertCategoryURL) else {
             self.loadingState = .failure(NetworkError.badRequest)

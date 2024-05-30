@@ -19,5 +19,4 @@ struct Meal: Codable, Comparable, Identifiable {
     let idMeal: String?
     let strMeal: String?
     let strMealThumb: String?
-  
 }

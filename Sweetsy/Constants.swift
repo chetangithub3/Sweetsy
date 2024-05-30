@@ -7,13 +7,13 @@
 
 import Foundation
 import SwiftUI
+
 struct Constants {
     struct API {
         static let dessertCategoryURL = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
         static let mealLookupURL = "https://themealdb.com/api/json/v1/1/lookup.php?i="
     }
 }
-
 
 public enum LoadingState {
     case none

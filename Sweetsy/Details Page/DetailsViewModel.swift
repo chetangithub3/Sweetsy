@@ -13,6 +13,7 @@ class DetailsViewModel: ObservableObject {
     init(apiService: APIService) {
         self.apiService = apiService
     }
+    
     func fetchDetails(mealID: String) async {
         let urlString = Constants.API.mealLookupURL + mealID
            guard let url = URL(string: urlString) else {

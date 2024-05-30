@@ -23,7 +23,6 @@ struct HomeView: View {
                                     MealItemDetailView(mealID: mealID)
                                         .background(.clear)
                                 }
-                                
                             } label: {
                                 MealItemView(meal: meal)
                             }

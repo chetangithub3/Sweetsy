@@ -30,7 +30,8 @@ struct IngredientsView: View {
                         }
                     }
                 }
-            } .listStyle(InsetGroupedListStyle())
+            } 
+            .listStyle(InsetGroupedListStyle())
                 .cornerRadius(20)
                 .shadow(radius: 5)
         }
