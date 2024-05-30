@@ -14,7 +14,7 @@ struct IngredientsView: View {
             Text("Ingredients")
                 .font(.title)
                 .fontWeight(.bold)
-                .padding(.vertical)
+                .padding(.bottom)
             ForEach(0..<20) { index in
                 if let ingredient =  meal.ingredient(for: index),
                    let measure = meal.measure(for: index) {
@@ -31,12 +31,12 @@ struct IngredientsView: View {
                     }
                 }
             } .listStyle(InsetGroupedListStyle())
-                .cornerRadius(10)
+                .cornerRadius(20)
                 .shadow(radius: 5)
         }
         .padding()
         .background(Color(.systemGray6))
-        .cornerRadius(10)
+        .cornerRadius(20)
         .shadow(radius: 5)
     }
 }

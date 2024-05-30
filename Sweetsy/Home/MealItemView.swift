@@ -32,7 +32,7 @@ struct MealItemView: View {
             }
         }.frame(width: getScreenBounds().width / 2.3, height: getScreenBounds().width / 2, alignment: .leading)
             .clipped()
-            .cornerRadius(8)
+            .cornerRadius(20)
             .shadow(radius: 2)
     }
 }

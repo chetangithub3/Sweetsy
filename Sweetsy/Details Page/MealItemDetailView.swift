@@ -45,19 +45,27 @@ struct MealDetailsView: View {
                         .frame(maxWidth: .infinity, maxHeight: 400)
                         .cornerRadius(20)
                 }
-                Text(meal.strMeal)
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.top)
-                Text(meal.strCategory)
-                    .font(.title2)
-                    .foregroundColor(.secondary)
+                HStack(alignment: .bottom){
+                    Text(meal.strMeal)
+                        .font(.largeTitle)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                        .bold()
+                    Spacer()
+                    Text(meal.strCategory)
+                        .font(.title3)
+                        .foregroundColor(.secondary)
+                }
+                .padding(.top)
                 IngredientsView(meal: meal)
-                Text("Steps")
-                    .font(.title3)
-                    .foregroundColor(.primary)
-                    .bold()
-                    .padding(.top)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Steps:")
+                        .font(.title3)
+                        .foregroundColor(.primary)
+                        .bold()
+                        .padding(.top)
+                    Divider()
+                }
                 if let steps = meal.steps() {
                     ForEach(steps, id: \.self) { step in
                         HStack(alignment: .top, spacing: 8){
@@ -72,6 +80,8 @@ struct MealDetailsView: View {
             }
             .padding()
         }
+        .navigationTitle(meal.strMeal)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
