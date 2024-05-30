@@ -10,7 +10,7 @@ struct ImageView: View {
     @StateObject private var imageLoader = ImageLoader()
     let imageURLString: String
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             if let image = imageLoader.image {
                 Image(uiImage: image)
                     .resizable()
