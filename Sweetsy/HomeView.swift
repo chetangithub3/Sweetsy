@@ -10,8 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var viewModel: HomeViewModel
     var body: some View {
-        VStack {
+        ScrollView {
             
+        }.task {
+            await viewModel.fetchMeals()
         }
     }
 }
