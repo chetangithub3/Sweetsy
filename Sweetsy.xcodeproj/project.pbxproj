@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		616FB8A22C07D5560011AD58 /* SweetsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8A12C07D5560011AD58 /* SweetsyApp.swift */; };
-		616FB8A42C07D5560011AD58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8A32C07D5560011AD58 /* HomeView.swift */; };
+		616FB8A42C07D5560011AD58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8A32C07D5560011AD58 /* ContentView.swift */; };
 		616FB8A62C07D5580011AD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616FB8A52C07D5580011AD58 /* Assets.xcassets */; };
 		616FB8A92C07D5580011AD58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616FB8A82C07D5580011AD58 /* Preview Assets.xcassets */; };
 		616FB8B02C07D7CD0011AD58 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8AF2C07D7CD0011AD58 /* Meals.swift */; };
@@ -16,12 +16,13 @@
 		616FB8B42C07D90A0011AD58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B32C07D90A0011AD58 /* Constants.swift */; };
 		616FB8B62C07DB1C0011AD58 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B52C07DB1C0011AD58 /* APIService.swift */; };
 		616FB8B82C0827DC0011AD58 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B72C0827DC0011AD58 /* ErrorView.swift */; };
+		616FB8BA2C082CE90011AD58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B92C082CE90011AD58 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		616FB89E2C07D5560011AD58 /* Sweetsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sweetsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		616FB8A12C07D5560011AD58 /* SweetsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetsyApp.swift; sourceTree = "<group>"; };
-		616FB8A32C07D5560011AD58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		616FB8A32C07D5560011AD58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		616FB8A52C07D5580011AD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616FB8A82C07D5580011AD58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		616FB8AF2C07D7CD0011AD58 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		616FB8B32C07D90A0011AD58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		616FB8B52C07DB1C0011AD58 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		616FB8B72C0827DC0011AD58 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		616FB8B92C082CE90011AD58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				616FB8A12C07D5560011AD58 /* SweetsyApp.swift */,
-				616FB8A32C07D5560011AD58 /* HomeView.swift */,
+				616FB8A32C07D5560011AD58 /* ContentView.swift */,
+				616FB8B92C082CE90011AD58 /* HomeView.swift */,
 				616FB8AF2C07D7CD0011AD58 /* Meals.swift */,
 				616FB8B12C07D8100011AD58 /* HomeViewModel.swift */,
 				616FB8B32C07D90A0011AD58 /* Constants.swift */,
@@ -154,9 +157,10 @@
 			files = (
 				616FB8B42C07D90A0011AD58 /* Constants.swift in Sources */,
 				616FB8B02C07D7CD0011AD58 /* Meals.swift in Sources */,
-				616FB8A42C07D5560011AD58 /* HomeView.swift in Sources */,
+				616FB8A42C07D5560011AD58 /* ContentView.swift in Sources */,
 				616FB8A22C07D5560011AD58 /* SweetsyApp.swift in Sources */,
 				616FB8B82C0827DC0011AD58 /* ErrorView.swift in Sources */,
+				616FB8BA2C082CE90011AD58 /* HomeView.swift in Sources */,
 				616FB8B62C07DB1C0011AD58 /* APIService.swift in Sources */,
 				616FB8B22C07D8100011AD58 /* HomeViewModel.swift in Sources */,
 			);

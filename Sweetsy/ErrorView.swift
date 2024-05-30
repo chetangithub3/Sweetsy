@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ErrorView: View {
-    var errorMessage : String
+    var error: Error
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(error.localizedDescription)
     }
 }
 
 #Preview {
-    ErrorView(errorMessage: "Unknown error")
+    ErrorView(error: NetworkError.unknown)
 }

@@ -31,5 +31,6 @@ public enum NetworkError: Error, LocalizedError {
     case unauthorized
     case forbidden
     case notFound
+    case decodingError
     case unknown
 }

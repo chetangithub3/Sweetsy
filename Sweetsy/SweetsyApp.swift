@@ -12,7 +12,7 @@ struct SweetsyApp: App {
     @StateObject var viewModel = HomeViewModel(apiService: APIService())
     var body: some Scene {
         WindowGroup {
-            HomeView().environmentObject(viewModel)
+            ContentView().environmentObject(viewModel)
         }
     }
 }
