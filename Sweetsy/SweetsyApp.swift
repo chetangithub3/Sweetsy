@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SweetsyApp: App {
+    @StateObject var viewModel = HomeViewModel(apiService: APIService())
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
+                .preferredColorScheme(.light)
         }
     }
 }
