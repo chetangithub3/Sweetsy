@@ -120,4 +120,9 @@ struct MealDetail: Codable {
             default: return nil
         }
     }
+    
+    func steps() -> [String]? {
+        let sentences = strInstructions.components(separatedBy: ". ")
+        return sentences
+    }
 }
