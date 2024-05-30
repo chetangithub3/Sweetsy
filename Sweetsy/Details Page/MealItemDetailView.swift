@@ -10,7 +10,6 @@ import SwiftUI
 struct MealItemDetailView: View {
     @ObservedObject var viewModel = DetailsViewModel(apiService: APIService())
     let mealID: String
-    
     var body: some View {
         VStack {
             switch viewModel.loadingState {
@@ -29,48 +28,6 @@ struct MealItemDetailView: View {
             }
         }.task {
             await viewModel.fetchDetails(mealID: mealID)
-        }
-    }
-}
-
-struct MealDetailsView: View {
-    var meal: MealDetail
-    var body: some View {
-        ScrollView{
-            VStack(alignment: .leading) {
-                if let imageUrl = meal.strMealThumb {
-                    ImageView(imageURLString: imageUrl)
-                        .scaledToFill()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(maxWidth: .infinity, maxHeight: 400)
-                        .cornerRadius(20)
-                }
-                Text(meal.strMeal)
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.top)
-                Text(meal.strCategory)
-                    .font(.title2)
-                    .foregroundColor(.secondary)
-                IngredientsView(meal: meal)
-                Text("Steps")
-                    .font(.title3)
-                    .foregroundColor(.primary)
-                    .bold()
-                    .padding(.top)
-                if let steps = meal.steps() {
-                    ForEach(steps, id: \.self) { step in
-                        HStack(alignment: .top, spacing: 8){
-                            Image(systemName: "circle.fill")
-                                .resizable()
-                                .frame(width: 5, height: 5)
-                                .padding(.top, 8)
-                            Text(step)
-                        } 
-                    }
-                }
-            }
-            .padding()
         }
     }
 }

@@ -18,7 +18,11 @@ struct HomeView: View {
                     ForEach(viewModel.meals, id: \.idMeal) { meal in
                         if let mealID = meal.idMeal {
                             NavigationLink {
-                                MealItemDetailView(mealID: mealID)
+                                ZStack{
+                                    UltrathinBackground().ignoresSafeArea()
+                                    MealItemDetailView(mealID: mealID)
+                                        .background(.clear)
+                                }
                             } label: {
                                 MealItemView(meal: meal)
                             }
@@ -26,7 +30,7 @@ struct HomeView: View {
                     }
                 }
                 .padding()
-        }.background(.pink.opacity(0.5).gradient)
+        }.navigationTitle("Sweetsy").foregroundColor(.white)
     }
 }
 

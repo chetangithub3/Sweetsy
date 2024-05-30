@@ -19,18 +19,18 @@ struct ContentView: View {
                         Text("Fetching items")
                     }
                 case .success:
-                    NavigationStack {
-                        HomeView()
+                        NavigationStack {
+                            ZStack{
+                                UltrathinBackground() .edgesIgnoringSafeArea(.all)
+                            HomeView()
+                        }
                     }
                 case .failure(let error):
                     ErrorView(error: error)
             }
-        }.task {
+        }
+        .task {
             await viewModel.fetchMeals()
         }
-       
-        
     }
 }
-
-

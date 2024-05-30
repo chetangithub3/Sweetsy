@@ -8,7 +8,6 @@
 import Foundation
 
 struct APIService {
-    
     func fetch(request: URLRequest?) async -> Result<Data, Error> {
         guard let request = request else {
             return .failure(NetworkError.badRequest)
@@ -20,17 +19,4 @@ struct APIService {
             return .failure(NetworkError.unknown)
         }
     }
-    
-}
-
-
-
-
-public enum NetworkError: Error, LocalizedError {
-    case badRequest
-    case unauthorized
-    case forbidden
-    case notFound
-    case decodingError
-    case unknown
 }
