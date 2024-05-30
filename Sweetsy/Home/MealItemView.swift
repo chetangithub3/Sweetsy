@@ -19,14 +19,25 @@ struct MealItemView: View {
                         .clipped()
                 }
                 HStack {
-                    Text(meal.strMeal ?? "")
-                        .font(.subheadline)
-                        .bold()
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(2, reservesSpace: true)
-                        .minimumScaleFactor(0.4)
-                        .foregroundStyle(.pink.opacity(0.8).gradient)
-                        .padding(8)
+                    if #available(iOS 16.0, *) {
+                        Text(meal.strMeal ?? "")
+                            .font(.subheadline)
+                            .bold()
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(2, reservesSpace: true)
+                            .minimumScaleFactor(0.4)
+                            .foregroundStyle(.pink.opacity(0.8))
+                            .padding(8)
+                    } else {
+                        Text(meal.strMeal ?? "")
+                            .font(.subheadline)
+                            .bold()
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.4)
+                            .foregroundStyle(.pink.opacity(0.8))
+                            .padding(8)
+                    }
                     Spacer()
                 }
                 .background(.ultraThinMaterial)

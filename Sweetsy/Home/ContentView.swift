@@ -19,7 +19,7 @@ struct ContentView: View {
                         Text("Fetching items")
                     }
                 case .success:
-                        NavigationStack {
+                        NavigationView {
                             ZStack{
                                 UltrathinBackground() .edgesIgnoringSafeArea(.all)
                             HomeView()

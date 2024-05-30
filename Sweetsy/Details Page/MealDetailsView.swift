@@ -21,9 +21,9 @@ struct MealDetailsView: View {
                 HStack(alignment: .bottom){
                     Text(meal.strMeal)
                         .font(.largeTitle)
+                        .fontWeight(.bold)
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
-                        .bold()
                     Spacer()
                     Text(meal.strCategory)
                         .font(.title3)
