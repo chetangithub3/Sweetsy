@@ -52,33 +52,27 @@ struct MealDetailsView: View {
                 Text(meal.strCategory)
                     .font(.title2)
                     .foregroundColor(.secondary)
-                Text(meal.strInstructions)
-                    .padding(.top)
                 IngredientsView(meal: meal)
-            }
-            .padding()
-        }
-        
-    }
-}
-
-struct IngredientsView: View {
-    let meal: MealDetail
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Ingredients")
-                .font(.headline)
-                .padding(.top)
-
-            ForEach(0..<20) { index in
-                if let ingredient =  meal.ingredient(for: index),
-                   let measure = meal.measure(for: index) {
-                    if !ingredient.isEmpty {
-                        Text("\(measure) \(ingredient.capitalized)")
+                Text("Steps")
+                    .font(.title3)
+                    .foregroundColor(.primary)
+                    .bold()
+                    .padding(.top)
+                if let steps = meal.steps() {
+                    ForEach(steps, id: \.self) { step in
+                        HStack(alignment: .top, spacing: 8){
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 5, height: 5)
+                                .padding(.top, 8)
+                            Text(step)
+                        } 
                     }
                 }
             }
+            .padding()
         }
     }
 }
+
+

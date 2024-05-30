@@ -23,6 +23,7 @@
 		616FB8C22C0836650011AD58 /* MealItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8C12C0836650011AD58 /* MealItemDetailView.swift */; };
 		616FB8C42C0838640011AD58 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8C32C0838640011AD58 /* MealDetails.swift */; };
 		616FB8CA2C08D2610011AD58 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8C92C08D2610011AD58 /* DetailsViewModel.swift */; };
+		616FB8CC2C08DA7E0011AD58 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8CB2C08DA7E0011AD58 /* IngredientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		616FB8C12C0836650011AD58 /* MealItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemDetailView.swift; sourceTree = "<group>"; };
 		616FB8C32C0838640011AD58 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		616FB8C92C08D2610011AD58 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		616FB8CB2C08DA7E0011AD58 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				616FB8C12C0836650011AD58 /* MealItemDetailView.swift */,
 				616FB8C32C0838640011AD58 /* MealDetails.swift */,
 				616FB8C92C08D2610011AD58 /* DetailsViewModel.swift */,
+				616FB8CB2C08DA7E0011AD58 /* IngredientsView.swift */,
 			);
 			path = "Details Page";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				616FB8B42C07D90A0011AD58 /* Constants.swift in Sources */,
+				616FB8CC2C08DA7E0011AD58 /* IngredientsView.swift in Sources */,
 				616FB8B02C07D7CD0011AD58 /* Meals.swift in Sources */,
 				616FB8BE2C0835040011AD58 /* ImageLoader.swift in Sources */,
 				616FB8A42C07D5560011AD58 /* ContentView.swift in Sources */,
