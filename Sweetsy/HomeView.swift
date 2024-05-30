@@ -16,10 +16,12 @@ struct HomeView: View {
                 columns: [column, column],
                 spacing: 16) {
                     ForEach(viewModel.meals, id: \.idMeal) { meal in
-                        NavigationLink {
-                            MealItemDetailView()
-                        } label: {
-                            MealItemView(meal: meal)
+                        if let mealID = meal.idMeal {
+                            NavigationLink {
+                                MealItemDetailView(mealID: mealID)
+                            } label: {
+                                MealItemView(meal: meal)
+                            }
                         }
                     }
                 }

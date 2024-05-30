@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct MealItemDetailView: View {
+    let mealID: String
     var body: some View {
         VStack {
         }
     }
 }
 
-#Preview {
-    MealItemDetailView()
-}

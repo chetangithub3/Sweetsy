@@ -34,8 +34,7 @@ class HomeViewModel: ObservableObject {
     func decodeMealsData(_ data: Data) {
         do {
             let meals = try JSONDecoder().decode(Meals.self, from: data)
-            self.meals = meals.meals ?? []
-            dump(meals)
+            self.meals = meals.meals?.sorted() ?? []
             self.loadingState = .success
         } catch {
             self.loadingState = .failure(NetworkError.decodingError)
