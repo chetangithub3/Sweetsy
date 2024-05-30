@@ -1,3 +1,3 @@
 #  Sweetsy - (Fetch - iOS Coding Challenge)
-![Simulator Screenshot - iPhone 15 - 2024-05-30 at 14 12 56](https://github.com/chetangithub3/Sweetsy/assets/71358043/ad28e09e-479b-4fe8-ab71-eb7baa9cff64)
-![Simulator Screenshot - iPhone 15 - 2024-05-30 at 14 13 19](https://github.com/chetangithub3/Sweetsy/assets/71358043/c34e1fea-13a0-40eb-891b-26bc831b59fc)
+<img width="177" alt="Screenshot 2024-05-30 at 2 33 19 PM" src="https://github.com/chetangithub3/Sweetsy/assets/71358043/a277870e-222b-4e8a-ab69-76d01277e6fd">
+<img width="175" alt="Screenshot 2024-05-30 at 2 32 44 PM" src="https://github.com/chetangithub3/Sweetsy/assets/71358043/f827d95a-aa5f-4702-934b-60396ee7dd69">
