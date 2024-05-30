@@ -14,16 +14,14 @@ struct ContentView: View {
             switch viewModel.loadingState {
                 case .none:
                     EmptyView()
-                       
                 case .loading:
                     ProgressView {
                         Text("Fetching items")
                     }
                 case .success:
-                    NavigationStack{
+                    NavigationStack {
                         HomeView()
                     }
-                    
                 case .failure(let error):
                     ErrorView(error: error)
             }
