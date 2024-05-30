@@ -81,7 +81,7 @@ struct MealDetailsView: View {
             .padding()
         }
         .navigationTitle(meal.strMeal)
-        .navigationBarTitleDisplayMode(.automatic)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

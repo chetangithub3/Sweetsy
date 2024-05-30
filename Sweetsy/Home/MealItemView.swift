@@ -28,7 +28,9 @@ struct MealItemView: View {
                         .foregroundStyle(.pink.opacity(0.8).gradient)
                         .padding(8)
                     Spacer()
-                }.background(.white.gradient)
+                }
+                .background(.ultraThinMaterial)
+                .background(.white)
             }
         }.frame(width: getScreenBounds().width / 2.3, height: getScreenBounds().width / 2, alignment: .leading)
             .clipped()
