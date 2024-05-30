@@ -51,6 +51,7 @@
 		616FB8CE2C08EA140011AD58 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		616FB8D02C08FF700011AD58 /* UltrathinBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrathinBackground.swift; sourceTree = "<group>"; };
 		616FB8D22C08FFEC0011AD58 /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
+		616FB8D42C0906210011AD58 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		616FB8952C07D5560011AD58 = {
 			isa = PBXGroup;
 			children = (
+				616FB8D42C0906210011AD58 /* README.md */,
 				616FB8A02C07D5560011AD58 /* Sweetsy */,
 				616FB89F2C07D5560011AD58 /* Products */,
 			);
