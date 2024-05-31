@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct APIService {
+protocol APIServiceProtocol {
+    func fetch(request: URLRequest?) async -> Result<Data, Error>
+}
+
+struct APIService: APIServiceProtocol {
     func fetch(request: URLRequest?) async -> Result<Data, Error> {
         guard let request = request else {
             return .failure(NetworkError.badRequest)

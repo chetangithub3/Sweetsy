@@ -9,8 +9,8 @@ import Foundation
 class DetailsViewModel: ObservableObject {
     @Published var loadingState: LoadingState = .none
     @Published var mealDetails: MealDetail?
-    var apiService: APIService
-    init(apiService: APIService) {
+    var apiService: APIServiceProtocol
+    init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
     

@@ -11,8 +11,8 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var loadingState: LoadingState = .none
     @Published var meals: [Meal] = []
-    var apiService: APIService
-    init(apiService: APIService) {
+    var apiService: APIServiceProtocol
+    init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
     
