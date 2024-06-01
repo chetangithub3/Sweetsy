@@ -26,13 +26,13 @@ class HomeViewModel: ObservableObject {
         let result = await apiService.fetch(request: request)
         switch result {
             case .success(let data):
-               decodeMealsData(data)
+                await decodeMealsData(data)
             case .failure(let error):
                 self.loadingState = .failure(error)
         }
     }
     
-    func decodeMealsData(_ data: Data) {
+    func decodeMealsData(_ data: Data) async {
         do {
             let meals = try JSONDecoder().decode(Meals.self, from: data)
             self.meals = meals.meals?.sorted() ?? []
