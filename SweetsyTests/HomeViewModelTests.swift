@@ -8,8 +8,9 @@
 import XCTest
 @testable import Sweetsy
 
-@MainActor
+
 class HomeViewModelTests: XCTestCase {
+    @MainActor
     func testFetchMealsRequestFailure() async {
         let mockAPIService = MockAPIService(error: NetworkError.badRequest)
         let viewModel: HomeViewModel = HomeViewModel(apiService: mockAPIService)
@@ -19,6 +20,7 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.meals.count, 0)
         
     }
+    @MainActor
     func testFetchMealsRequestSuccess() async {
         let sampleData = """
                 {

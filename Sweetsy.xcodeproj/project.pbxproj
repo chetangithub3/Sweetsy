@@ -70,6 +70,7 @@
 		616FB9332C0B9ED90011AD58 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB9322C0B9ED90011AD58 /* HomeViewModelTests.swift */; };
 		616FB9342C0BB9430011AD58 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B52C07DB1C0011AD58 /* APIService.swift */; };
 		616FB9352C0BB9470011AD58 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB8B52C07DB1C0011AD58 /* APIService.swift */; };
+		616FB9372C0BCB900011AD58 /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FB9362C0BCB900011AD58 /* DetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		616FB9032C0B9DB30011AD58 /* SweetsyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetsyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		616FB9302C0B9E350011AD58 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 		616FB9322C0B9ED90011AD58 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		616FB9362C0BCB900011AD58 /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				616FB8F42C0B9D8A0011AD58 /* SweetsyTests.swift */,
 				616FB9302C0B9E350011AD58 /* MockAPIService.swift */,
 				616FB9322C0B9ED90011AD58 /* HomeViewModelTests.swift */,
+				616FB9362C0BCB900011AD58 /* DetailsViewModelTests.swift */,
 			);
 			path = SweetsyTests;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				616FB92C2C0B9E040011AD58 /* Constants.swift in Sources */,
 				616FB9342C0BB9430011AD58 /* APIService.swift in Sources */,
 				616FB9122C0B9DC40011AD58 /* MealItemView.swift in Sources */,
+				616FB9372C0BCB900011AD58 /* DetailsViewModelTests.swift in Sources */,
 				616FB9182C0B9DDB0011AD58 /* MealDetailsView.swift in Sources */,
 				616FB9242C0B9DF00011AD58 /* ImageLoader.swift in Sources */,
 				616FB90A2C0B9DB80011AD58 /* SweetsyApp.swift in Sources */,

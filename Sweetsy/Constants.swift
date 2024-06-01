@@ -49,3 +49,16 @@ extension View {
 protocol APIServiceProtocol {
     func fetch(request: URLRequest?) async -> Result<Data, NetworkError>
 }
+
+extension Data
+{
+    func printJSON(debugTitle: String)
+    {
+        if let JSONString = String(data: self, encoding: String.Encoding.utf8)
+        {
+            print("------\(debugTitle)")
+            print(JSONString)
+            print("------\(debugTitle)")
+        }
+    }
+}

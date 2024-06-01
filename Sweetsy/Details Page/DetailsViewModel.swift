@@ -33,6 +33,8 @@ class DetailsViewModel: ObservableObject {
     @MainActor
     func decodeMealDetails(_ data: Data) {
         do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let mealDetails = try JSONDecoder().decode(MealDetails.self, from: data)
             if let firstItem = mealDetails.meals.first {
                 self.mealDetails = firstItem
@@ -44,4 +46,6 @@ class DetailsViewModel: ObservableObject {
             self.loadingState = .failure(NetworkError.decodingError)
         }
     }
+    
+
 }
