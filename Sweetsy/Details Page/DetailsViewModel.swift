@@ -9,8 +9,8 @@ import Foundation
 class DetailsViewModel: ObservableObject {
     @Published var loadingState: LoadingState = .none
     @Published var mealDetails: MealDetail?
-    var apiService: APIService
-    init(apiService: APIService) {
+    var apiService: APIServiceProtocol
+    init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
     
@@ -33,6 +33,8 @@ class DetailsViewModel: ObservableObject {
     @MainActor
     func decodeMealDetails(_ data: Data) {
         do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let mealDetails = try JSONDecoder().decode(MealDetails.self, from: data)
             if let firstItem = mealDetails.meals.first {
                 self.mealDetails = firstItem
@@ -44,4 +46,6 @@ class DetailsViewModel: ObservableObject {
             self.loadingState = .failure(NetworkError.decodingError)
         }
     }
+    
+
 }

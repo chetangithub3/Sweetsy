@@ -15,25 +15,23 @@ struct IngredientsView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.bottom)
-            ForEach(0..<20) { index in
-                if let ingredient =  meal.ingredient(for: index),
-                   let measure = meal.measure(for: index) {
-                    if !ingredient.isEmpty {
-                        HStack {
-                            Text(ingredient.capitalized)
-                                .frame(width: getScreenBounds().width / 2 - 20, alignment: .leading)
-                                .foregroundColor(.primary)
-                            Text(measure)
-                                .frame(alignment: .leading)
-                                .foregroundColor(.secondary)
-                            Spacer()
-                        }
+            ForEach(Array(meal.ingredientMeasurements.keys.sorted()), id: \.self) { ingredient in
+                if let measurement = meal.ingredientMeasurements[ingredient] {
+                    HStack {
+                        Text(ingredient.capitalized)
+                            .frame(width: getScreenBounds().width / 2 - 20, alignment: .leading)
+                            .foregroundColor(.primary)
+                        Text(measurement)
+                            .frame(alignment: .leading)
+                            .foregroundColor(.secondary)
+                        Spacer()
                     }
                 }
-            } 
+            }
+            
             .listStyle(InsetGroupedListStyle())
-                .cornerRadius(20)
-                .shadow(radius: 5)
+            .cornerRadius(20)
+            .shadow(radius: 5)
         }
         .padding()
         .background(Color(.systemGray6))

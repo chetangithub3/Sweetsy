@@ -11,7 +11,7 @@ struct MealDetailsView: View {
     var body: some View {
         ScrollView{
             VStack(alignment: .leading) {
-                if let imageUrl = meal.strMealThumb {
+                if let imageUrl = meal.thumbnailURL {
                     ImageView(imageURLString: imageUrl)
                         .scaledToFill()
                         .aspectRatio(contentMode: .fill)
@@ -19,13 +19,13 @@ struct MealDetailsView: View {
                         .cornerRadius(20)
                 }
                 HStack(alignment: .bottom){
-                    Text(meal.strMeal)
+                    Text(meal.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
                     Spacer()
-                    Text(meal.strCategory)
+                    Text(meal.category)
                         .font(.title3)
                         .foregroundColor(.secondary)
                 }
@@ -39,6 +39,7 @@ struct MealDetailsView: View {
                         .padding(.top)
                     Divider()
                 }
+                
                 if let steps = meal.steps() {
                     ForEach(steps, id: \.self) { step in
                         HStack(alignment: .top, spacing: 8){
@@ -53,7 +54,7 @@ struct MealDetailsView: View {
             }
             .padding()
         }
-        .navigationTitle(meal.strMeal)
+        .navigationTitle(meal.name)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
